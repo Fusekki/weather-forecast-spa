@@ -34,6 +34,9 @@ weatherApp.service('cityService', function() {
                 
 });
 
+
+
+
 //CONTROLLERS
 
 weatherApp.controller('homeController', ['$scope', 'cityService', function ($scope, cityService) {
@@ -71,20 +74,20 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
 
 }]);
 
-//LISTENERS
+//DIRECTIVES
 
-//window.addEventListener('hashchange', function () {
-//    if (window.location.hash === "#/forecast/2") {
-//        
-//    }
-//    
-//    if (window.location.hash === "#/forecast/5") {
-//        
-//    }
-//    
-//    if (window.location.hash === "#/forecast/7") {
-//        
-//    }
-//})
-
-
+weatherApp.directive("weatherReport", function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'directives/weatherReport.html',
+        replace: true,
+        scope: {
+            weatherDay: "=",
+            convertToStandard: "&",
+            convertToDate: "&",
+            dateFormat: "@"
+            
+        }
+        
+    }
+});
