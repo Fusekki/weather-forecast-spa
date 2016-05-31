@@ -71,4 +71,20 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
 
 }]);
 
+//LISTENERS
+
+//window.addEventListener('hashchange', function () {
+//    if (window.location.hash === "#/forecast/2") {
+//        
+//    }
+//    
+//    if (window.location.hash === "#/forecast/5") {
+//        
+//    }
+//    
+//    if (window.location.hash === "#/forecast/7") {
+//        
+//    }
+//})
+
 
